@@ -102,6 +102,7 @@ In conclusion, activation functions are vital for:
 - Controlling the output range for smoother learning and interpretability.
 - Building powerful network architectures by stacking layers.
 - Matching the network's capabilities to specific tasks through varied activation functions.
+<br><br>
 
 ## 2. Mathematical Exploration:
 ### 2.1 Derive the Activation function formula and demonstrate its output range. 
@@ -117,6 +118,7 @@ To demonstrate its output range, we'll show that the output of the sigmoid funct
 
 
 Thus, the output of the sigmoid function is bounded between 0 and 1 for any real-valued input x.
+<br>
 
 ### 2.2 Calculate the derivative of the Activation function and explain its significance in the backpropagation process.
 
@@ -130,6 +132,7 @@ The derivative of the sigmoid function is given by σ (x) × (1 - σ (x)).
 The derivative of the sigmoid function plays a crucial role in the backpropagation process during neural network training. It represents the gradient of the sigmoid activation function with respect to its input x. This gradient indicates how the output of the sigmoid function changes concerning small changes in its input.
 
 During backpropagation, the calculated derivative is used to update the weights of the neural network in the direction that minimizes the loss function. It helps adjust the parameters of the network to minimize the error between the predicted output and the actual output, thus enabling the network to learn from the training data. The sigmoid function's derivative being a function of its own output helps propagate gradients effectively through the network layers during the optimization process.
+<br><br>
 
 ## 3. Programming Exercise:
 - Implement the Activation Function in Python. Use the following prototype for your function: 
@@ -207,6 +210,8 @@ plt.show()
 #### Output:
 ![alt text](images/all.png)
 
+<br><br>
+
 ## 4. Analysis:
 ### 4.1 Analyze the advantages and disadvantages of using the Activation Function in neural networks.
 #### 4.1.1 Advantages:
@@ -225,10 +230,11 @@ plt.show()
 - **Vanishing/Exploding Gradients:** Certain activations (e.g., Sigmoid) can exacerbate vanishing gradients in deep networks, making learning difficult. Others (e.g., ReLU) might suffer from exploding gradients.
 - **Choice Matters:** Selecting the wrong activation can hinder performance. Understanding their characteristics and task requirements is crucial.
 
+<br>
 
 ### 4.2 Discuss the impact of the Activation function on gradient descent and the problem of vanishing gradients.
 
-Impact of Activation Function on Gradient Descent:
+#### Impact of Activation Function on Gradient Descent:
 1.	**Vanishing Gradients:**
     - Activation functions with derivatives that tend to approach zero for extreme input values can lead to vanishing gradients during backpropagation. When gradients become very small, the updates to the network weights also become insignificant, causing slow or stalled learning.
     - This phenomenon is particularly problematic in deep networks with many layers, as the gradients have to pass through multiple activation functions, compounding the effect of vanishing gradients as they propagate backward through the network.
@@ -242,10 +248,11 @@ Impact of Activation Function on Gradient Descent:
 
 
 
-Problem of Vanishing Gradients:
+#### Problem of Vanishing Gradients:
 1.	Slow Training: Vanishing gradients can significantly slow down the training process as the network parameters are updated less effectively during backpropagation. This results in longer training times and may hinder the ability of the network to converge to an optimal solution.
 2.	Limited Depth: Vanishing gradients impose limitations on the depth of neural networks that can be effectively trained. As the gradients become increasingly smaller with each layer, deep networks may struggle to learn meaningful representations of the data, limiting their capacity to capture complex patterns and relationships.
 3.	Difficulty in Capturing Long-Term Dependencies: In sequential data tasks such as natural language processing or speech recognition, vanishing gradients can impede the network's ability to capture long-term dependencies. This is because the gradients may vanish before they can propagate across multiple time steps or layers, leading to a loss of contextual information.
+<br><br>
 
 ## Content Credits:
 1. https://github.com/BytesOfIntelligences
